@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Road Map Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Generate RoadMap for Projects</h1>
+							<div class="row">
+								<h3>VIDEO DEMO </h3>
+								<ul class="icons">
+									<li><a href="https://youtu.be/Qo8xihB8vJQ" class="icon brands alt fa-youtube">
+										<span class="label">YouTube Demo</span></a></li>
+								</ul>
+								<h3>GITHUB REPO: </h3>
+								<ul class="icons">
+									<li><a href="https://github.com/Maheer1207/Project-GenerateProjectRoadMapOnSlideFromSheets" 
+										class="icon brands alt fa-github">
+										<span class="label">GitHub Repo</span></a></li>
+								</ul>
+							</div>
+							<p>This project was created to help a Project Management Team of an organization, where the team has all the 
+								resources like the tasks, start dates, end dates, predecessor, successor, as well as the chronology, which 
+								is also regraded as vertical levels or positions. The goal was to generate a roadmap of the project planning 
+								on Google Slides with the aid of the available formatted resources in Google Sheets. Following that, the script 
+								was expected to be available to all the team members with the expectation that some members might not be able to 
+								deal with the raw codes on Visual Studio or another IDE, so I had to append it as a Google Sheet Extension only 
+								for the members of the team.</p>
+
+							<h2>How it works</h2>
+							<p>All the team members logging in with the organization's Google domain are automatically verified to access the 
+								"RoadMap Generator" extension in their Google Sheets. Once they download it as an add-on and run the extension, 
+								the user is required to give some inputs like the Pre-made template name, Source Sheet Name, Scales, and 
+								Cartesian Start Position of the road map. Following the inputs, the AppScript Code reads the source files and 
+								calculates the rectangular object of Google Slide for the tasks with the aid of Scales and Start Position. 
+								Lastly, with the aid of the Google Drive, Sheets, and Slides API, AppScript generates the RoadMap presentation 
+								in the team member's Google Slide in a ready to Present Slide that comes well labelled and have the minor 
+								details.</p>
+							<h2>Tools Implemented or Playing a Key Role</h2>
+							<p>
+								1. Google Drive API: This is utilized to access the existing "template" slides that provide the foundation for 
+								creating the roadmap. The API also allows the creation of a copy of the slide presentation.<br />
+								2. Google Sheets API: Employed to read the source data sheets, extract the required data, and format it into 
+								another sheet.<br />
+								3. Google Slides API: This API is used to create the roadmap on a copy of the "template" slide stored in Google 
+								Drive.<br />
+								4. Google OAuth: Integrated to provide verification upon the installation of the Add-on. As it was developed 
+								with a focus solely on the organization, external access is restricted. It also obtains permission from users 
+								to read and write in their Google Drive.<br />
+								5. Google Marketplace: Utilized to publish and promote the script as an extension, available as an add-on for 
+								Google Sheets used by the organization's employees.</p>
+							<h2>Steps to setup the environment for Add-on </h2>
+							<p>
+								1. Make sure that the template slide for the base layer of the roadmap exists (a sample of template slides is 
+								provided in the repository).<br />
+								2. The source sheet should adhere to the standard structure of a spreadsheet, with the following guidelines: 
+								a. Row 1 serves as the header, and all subsequent rows contain data. b. Column headers include Activity ID, 
+								Task Name*, Start Date*, Finish Date*, Successor, Predecessor, and . These headers begin from column 1 in 
+								sequential order. Column headers marked with an asterisk are crucial for the program to generate taskbars on 
+								the roadmap. They must remain in their designated positions (Task Name*, Start Date*, Finish Date*, and Vertical
+								 Position/Level* in columns B, C, D, and E respectively). Other columns can be rearranged as needed.<br />
+								<center>
+										<span class="image">
+										<img src="images/rms1.jpeg" alt="" width="1000"/>
+									</span>
+								</center>
+								<br />
+								3. Each cell/row should be filled with the user's chosen color for the task bar. The program reads the 
+								background color of individual row cells when reading the roadmap data and uses it to color the generated 
+								taskbars.<br />
+								<center>
+									<span class="image">
+										<img src="images/rms2.jpg" alt="" width="700"/>
+									</span>
+								</center>
+								<br />
+								4. Dates should follow one of these formats: either as a date object, like “July 1, 2027 8:00 AM” or 
+								“26-Sep-22”, or as a string, like “16-Jul-21 A”, where the initial part of the string contains the date to be 
+								used.<br />
+								<center>
+									<span class="image">
+										<img src="images/rms3.jpeg" alt="" width="700"/>
+									</span>
+								</center>
+								<br />
+								5. As the template of the Google Slide used for generating the roadmap slide may vary, there is no pre-generated
+								 template. Hence, ensure that you create an appropriate template before running the program.<br />
+								6. The template should be designed using the “insert table” feature. Add columns and rows according to the 
+								specific requirements of the roadmap. Make sure that the table is not placed in the theme/layout layer of the 
+								slide, as this information is not duplicated when the slide is copied.<br />
+								<center>
+									<span class="image">
+										<img src="images/rms4.jpeg" alt="" width="700"height="400"/>
+									</span>
+								</center>
+								<br />
+								7. Each Google presentation should comprise only one slide. The designated template slide for drawing should be 
+								the sole slide in the template.<br />
+								8. The height of the grid on which the roadmap task bars will be drawn should be a minimum of 12.25 cm.<br />
+								<center>
+									<span class="image">
+										<img src="images/rms5.jpeg" alt="" width="900"height="400"/>
+									</span>
+								</center>
+								<br />
+								9.Verify that the language setting for your slide is English (Canada) to ensure that the measurements used are 
+								in the metric system. If they appear in imperial format, confirm that the language is set to Canada and not the 
+								US.	
+								<br />
+								<p><a href="Steps to setup the environment for Add-on.pdf">Open it as a PDF</a>.</p>
+							</p>
+							<h2>Steps to use the Add-on </h2>
+							<p>
+								1. Install the 'RoadMap Automation Extension' as an add-on in your Google Sheets.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu1.jpeg" alt="" width="700"height="400"/>
+										<img src="images/rmu2.jpeg" alt="" width="700"height="400"/>
+									</span>
+								</center>
+								<br />
+								2. Once this is completed, you'll notice a new feature added under 'Extensions' called 'Draw Task Bars and 
+								Milestones.'<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu3.jpeg" alt="" width="700"height="400"/>
+									</span>
+								</center>
+								<br />
+								3. To utilize this feature, begin by entering the name of the source sheet in your Google Spreadsheet.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu4.jpeg" alt="" width="400">
+									</span>	
+								</center>
+								<br />
+								4. Following that, the system will prompt you to specify the name of the Google Slide template you intend 
+								to use for your roadmap.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu5.jpeg" alt="" width="400"/>
+									</span>
+								</center>
+								<br />
+								5. Subsequently, you will be required to input the length of the taskbar for a month. You can determine 
+								this length by utilizing the  'Insert Shape' function and adjusting its format. Add a rectangular shape to 
+								the grid and calculate the monthly length of the taskbar using the 'Size & Rotation' options.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu6.jpeg" alt="" width="400"height="300"/>
+										<img src="images/rmu7.jpeg" alt="" width="900"/>
+									</span>
+								</center>
+								<br />
+								6. Moving on, input the X-Coordinate from which you want the roadmap's taskbar to commence, employing the 
+								'Position' feature.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu8.jpeg" alt="" width="400"/>
+										<img src="images/rmu9.jpeg" alt="" width="900"/>
+									</span>
+								</center>
+								<br />
+								7. Lastly, provide the Y-Coordinates indicating the starting point of the roadmap's taskbar, also using the 
+								'Position' feature.<br />
+								<center>
+									<span class="image">
+										<img src="images/rmu10.jpeg" alt="" width="400"/>
+										<img src="images/rmu11.jpeg" alt="" width="900"/>
+									</span>
+								</center>
+								<br />
+								That should generate a Google slide with the Roadmap.
+								<br />
+								<p><a href="Steps to use the Add-on.pdf">Open it as a PDF</a>.</p>
+							</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<center>
+					<div class="inner">
+						<section>
+							<h2>Contact Information And Websites</h2>
+							<ul class="icons">
+								<li><a href="tel:+17806953570" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="mailto:mmaheer@ualberta.ca" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="http://www.linkedin.com/in/mmaheer" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/Maheer1207" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy;2024 Mohammad Mohaiminul Islam Maheer. All rights reserved</li>
+						</ul>
+					</center>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Extract EVA to DB</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Extract EVA From XML To CosmosDB</h1>
+							<div class="row">
+								<h3>VIDEO DEMO </h3>
+								<ul class="icons">
+									<li><a href="https://youtu.be/qjQpj4gfp2o" class="icon brands alt fa-youtube">
+										<span class="label">YouTube Demo</span></a></li>
+								</ul>
+								<h3>GITHUB REPO: </h3>
+								<ul class="icons">
+									<li><a href="https://github.com/Maheer1207/Project-ExtractEVAToDatabase/tree/master" 
+										class="icon brands alt fa-github">
+										<span class="label">GitHub Repo</span></a></li>
+								</ul>
+							</div>
+							<p>
+								The objective of this project was to extract and store the Earned Value Analysis (EVA) from existing projects 
+								utilized or created through the desktop Symphony App. This app conducts Earned Value Analysis for projects by 
+								utilizing their Plans and Actuals data. The aim was to establish a dedicated Database within the organization's 
+								designated Azure Cosmos DB. This would enable access for company personnel as well as a Web app developed 
+								specifically to manage Earned Value Analyses.
+							</p>
+
+							<h2>How it works</h2>
+							<p>
+								To initiate the script, when loaded within an IDE (like Visual Studio), the user is prompted to provide their 
+								User Name and Folder Name via TextBoxes. Furthermore, an option is provided to select the '.eva' file, which 
+								contains the Earned Value Analysis of the Project Data as utilized in the Symphony App. Lastly, the user is 
+								required to confirm the accuracy of the selected information.
+							</p>
+							<p>
+								Once confirmation is received through a button click, the script is set into motion. It meticulously parses 
+								through the XML/'.eva' file, systematically extracting the project information pertaining to tasks and task 
+								packages. Simultaneously, the C# script constructs a coherent tree structure, neatly organizing task summaries 
+								along with their respective child tasks. This strategic approach fully capitalizes on the inherent benefits of 
+								a tree structure, offering enhanced management and presentation capabilities.
+							</p>
+							<p>
+								The entire process was thoughtfully executed using a modular methodology. Each module was assigned a specific 
+								role, whether generating 'Tasks', crafting 'Task Summaries', or shaping the final 'Project' structure. This 
+								meticulous division ensures a well-structured framework that minimizes unnecessary coupling.
+							</p>
+							<h2>Tools Implemented or Playing a Key Role</h2>
+							<p>
+								1. Windows Form: This interface will allow users to input information, such as the owner's name and folder name,
+								 and provide them with the option to select the source file.<br />
+								2. "System.XML" library: The "System.XML" library will be employed to load the source ".eva" file as an XML 
+								document. Subsequently, data will be extracted from the XML file.<br />
+								3. Azure Cosmos DB: The extracted Project EVA will be stored in Azure Cosmos DB, making it accessible for 
+								loading within the organization's Azure Web App.<br />
+								4. Mongo API: The Mongo API will facilitate NoSQL operations, including the insertion, deletion, and 
+								replacement of the project's EVA, along with its task summaries and tasks.<br />
+							</p>
+							<h2>Steps to set up the Environment</h2>
+							<p>
+								1. Clone the repo fully  <br />
+								2. Open it in an IDE; lets assume I open it in Visual Studio <br />
+								3. Use the NuGet Package Manager to download all the required packages and libraries <br />
+								4. Set up the "dbClient" with the connection string of the Database where you want to save it, followed by 
+								setting the Database's collection name. <br />
+								5. Once all the steps are attained, the project is ready to be built and run. <br />
+								After following all these steps, upon execution, a form should appear prompting for inputs, indicating that 
+								the setup is now ready for utilization. <br />
+							</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<center>
+					<div class="inner">
+						<section>
+							<h2>Contact Information And Websites</h2>
+							<ul class="icons">
+								<li><a href="tel:+17806953570" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="mailto:mmaheer@ualberta.ca" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="http://www.linkedin.com/in/mmaheer" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/Maheer1207" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy;2024 Mohammad Mohaiminul Islam Maheer. All rights reserved</li>
+						</ul>
+					</center>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

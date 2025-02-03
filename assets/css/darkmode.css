@@ -1,34 +1,48 @@
-/* Dark Mode Styling */
+/* Dark Styling */
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* Adjust project cards for dark mode */
+/* Adjust project cards for Dark */
 body.dark-mode .tiles article {
     background: #222;
     border: 1px solid #444;
 }
 
-/* Footer dark mode */
+/* Footer Dark */
 body.dark-mode #footer {
     background: #181818;
 }
 
-/* Dark mode button styling */
+/* Dark Button Positioning */
 #theme-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    padding: 8px 16px;
-    border: none;
+    position: fixed; /* Keeps it fixed in the top-right */
+    top: 20px; /* Increased from 15px to prevent overlap */
+    right: 20px; /* Ensures the button stays in the top-right */
+    z-index: 1000; /* Ensures it's always on top of other elements */
+    padding: 10px 16px; /* Better button spacing */
     background-color: #f1c40f;
     color: #000;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Prevents blending into background */
 }
+
 
 #theme-toggle:hover {
     background-color: #e67e22;
+}
+
+/* Adjust for Small Screens */
+@media screen and (max-width: 768px) {
+    #theme-toggle {
+        top: 10px; /* Reduce space for smaller screens */
+        right: 10px;
+        padding: 8px 12px; /* Slightly smaller button */
+        font-size: 8px;
+    }
 }

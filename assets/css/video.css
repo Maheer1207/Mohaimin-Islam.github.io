@@ -1,0 +1,35 @@
+/* Video Container */
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Default Video Styling */
+.video video {
+    width: 100%; /* Full width of the container */
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Ensures the video fills the space without distortion */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.video video:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media screen and (max-width: 768px) {
+    .video video {
+        height: 200px; /* Reduce height on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video video {
+        height: 150px; /* Further reduce height on mobile */
+    }
+}

@@ -32,12 +32,14 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    align-items: center; /* Ensure all items align vertically */
+    margin: 0;
+    padding: 0;
 }
 
 #navbar .nav-links li {
-    display: inline-block;
+    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #navbar .nav-links a {
@@ -61,6 +63,8 @@
     border-radius: 5px;
     cursor: pointer;
     padding: 8px 12px;
+    margin-left: 20px; /* Space from links */
+    align-self: center; /* Align button with navbar */
 }
 
 #navbar button:hover {
@@ -82,13 +86,20 @@ body {
         padding: 15px 20px;
     }
 
+    #navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     #navbar .nav-links {
         flex-direction: column;
         gap: 10px;
+        margin: 10px 0;
     }
 
     #navbar button {
-        margin-top: 10px;
+        margin-left: 0; /* Remove margin-left for mobile */
+        margin-top: 10px; /* Add spacing between button and links */
     }
 
     body {

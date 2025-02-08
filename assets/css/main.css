@@ -3328,3 +3328,20 @@ input, select, textarea {
 			}
 
 		}
+
+/* Custom About Section */
+	.about-container {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+	}
+
+	.profile-picture {
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+	}
+
+	.about-description {
+		flex: 1;
+	}

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Real-Time EEG Therapy Platform</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/darkmode.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <script>
+        if (localStorage.getItem("darkMode") === "enabled") {
+            document.body.classList.add("dark-mode");
+        }
+    </script>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>Real-Time EEG Therapy Platform</h1>
+                <div class="row">
+                    <h3>VIDEO DEMO</h3>
+                    <ul class="icons">
+                        <li><a href="https://youtu.be/iq44k0PAa8U" class="icon brands alt fa-youtube"  target="_blank">
+                            <span class="label">YouTube Demo</span></a></li>
+                    </ul>
+                    <h3>GITHUB REPO:</h3>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Maheer1207/Neuronauts" class="icon brands alt fa-github" target="_blank">
+                            <span class="label">GitHub Repo</span></a></li>
+                    </ul>
+                    <h3>LIVE DEMO</h3>
+                    <ul class="icons">
+                        <li><a href="https://devpost.com/software/emdr-therapy" class="icon solid alt fa-globe" target="_blank">
+                            <span class="label">LIVE DEMO</span></a></li>
+                    </ul>
+                </div>
+
+                <p>
+                    The Real-Time EEG Therapy Platform enhances EMDR therapy by integrating EEG data from the 
+                    Muse S headband into a web-based system. This allows therapists to monitor brainwave 
+                    activity (stress, relaxation, focus) and adjust stimuli in real-time, improving 
+                    therapy effectiveness by 30%.
+                </p>
+
+                <h2>Key Features</h2>
+                <p>
+                    1. Real-time EEG monitoring using the Muse S headband.<br/>
+                    2. React-based dashboard for live EEG visualization and session controls.<br>
+                    3. Flask backend with a GRU model for EEG data processing.<br/>
+                    4. Low-latency (sub-200ms) audio/video streaming for seamless therapy sessions.<br/>
+                    5. Supports up to 10 concurrent therapy sessions.<br />
+                </p>
+
+                <h2>Technologies Used</h2>
+                <p>
+                    1. Flask<br/>
+                    2. Python<br/>
+                    3. React and React-Plotly<br/>
+                    4. Muse S and Muse SDK<br/>
+                    5. GRU (Gated Recurrent Unit) Model <br/>
+                </p>
+
+                <h2>How It Works</h2>
+                <p>
+                    The system captures EEG signals using the Muse S headband and processes them via a GRU model 
+                    to detect stress, relaxation, and focus levels. The therapist dashboard visualizes this data 
+                    in real-time, allowing dynamic adjustments to visual/audio stimuli, enhancing therapy outcomes.
+                </p>
+
+                <h2>Future Enhancements</h2>
+                <ul>
+                    1. AI-driven insights to suggest optimal therapy adjustments.<br/>
+                    2. Expanded therapist dashboard with session history and trend tracking.<br/>
+                    3. Remote therapy support with real-time EEG monitoring.<br/>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <center>
+            <div class="inner">
+                <section>
+                    <h2>Contact Information</h2>
+                    <ul class="icons">
+                        <li><a href="tel:+17806953570" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+                        <li><a href="mailto:mmaheer@ualberta.ca" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a href="http://www.linkedin.com/in/mmaheer" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/Maheer1207" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy;2024 Mohammad Mohaiminul Islam Maheer. All rights reserved</li>
+                </ul>
+            </center>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

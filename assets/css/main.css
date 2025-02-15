@@ -3152,13 +3152,13 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 6em 0 6em 0 ;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			#main {
-				padding: 0em 0 4em 0 ;
+				padding: 8em 0 4em 0 ;
 			}
 
 		}
@@ -3344,4 +3344,23 @@ input, select, textarea {
 
 	.about-description {
 		flex: 1;
+	}
+
+/* Media Queries for Responsiveness */
+	@media screen and (max-width: 768px) {
+		.about-container {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.profile-picture {
+			width: 150px; /* Adjust the size for smaller screens */
+			height: 150px; /* Adjust the size for smaller screens */
+			margin-bottom: 20px;
+		}
+
+		.about-description {
+			text-align: center;
+		}
 	}

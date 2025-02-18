@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>AI-Driven Image Synthesis Models</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/navbar.css" />
+    </head>
+
+    <body class="is-preload">
+        <script>
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark-mode");
+            }
+        </script>
+        <div id="wrapper">
+            <!-- Main Content -->
+            <div id="main">
+                <div class="inner">
+                    <header>
+                        <h1>AI-Driven Image Synthesis Models</h1>
+                        <image src="images/ImageSynthesis1.jpg" alt="Generated Image Samples" width="20%" height="25%">
+                        <image src="images/ImageSynthesis2.jpg" alt="Generated Image Samples" width="20%" height="25%">
+                        <image src="images/ImageSynthesis3.jpg" alt="Generated Image Samples" width="20%" height="25%">
+                        <image src="images/ImageSynthesis.jpg" alt="Generated Image Samples" width="20%" height="25%">
+
+                        <p> <br/>
+                            Implemented <strong>VAE, DDPM, DDIM, and LDDPM models</strong> for high-fidelity, 
+                            class-conditional image generation using <strong>FashionMNIST</strong>.
+                        </p>
+                    </header>
+
+                    <section>
+                        <h2>Overview</h2>
+                        <p>
+                            This project explores modern generative modeling techniques for 
+                            image synthesis, leveraging Variational Autoencoders (<strong>VAE</strong>) and Denoising Diffusion Models (<strong>DDPM, DDIM, LDDPM</strong>).
+                            These techniques enable high-quality, class-conditional image generation 
+                            with <strong>85%+</strong> classifier accuracy.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Key Features</h2>
+                        <ul>
+                            <li><strong>Variational Autoencoder (VAE):</strong> Built an encoder-decoder network to model latent representations of FashionMNIST images.</li>
+                            <li><strong>Diffusion Models (DDPM, DDIM, LDDPM):</strong> Implemented a UNet-based noise estimator and variance scheduler for denoising image synthesis.</li>
+                            <li><strong>Latent Diffusion & Class-Conditioning:</strong> Applied latent diffusion techniques to ensure high-fidelity and class-specific image synthesis.</li>
+                            <li><strong>Classifier-Guided Training:</strong> Trained a classifier alongside the generative model to validate sample quality, achieving 85%+ accuracy.</li>
+                            <li><strong>Reproducible Training Pipelines:</strong> Integrated modular checkpointing and deterministic sampling for consistent results.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Architecture & Implementation</h2>
+                        <p>
+                            The training pipeline involved two main stages:
+                        </p>
+                        <ol>
+                            <li><strong>Stage 1: Variational Autoencoder (VAE) Pretraining</strong>  
+                                - The encoder compresses input images into a latent space, while the decoder reconstructs them.  
+                                - <strong>Loss Function:</strong> Used a reconstruction loss + KL divergence to optimize latent representations.
+                            </li>
+                            <li><strong>Stage 2: Diffusion Model Training (DDPM/DDIM)</strong>  
+                                - Trained a UNet-based noise predictor to learn the reverse diffusion process.  
+                                - Implemented variance scheduling for stable sample generation.  
+                                - Added classifier guidance to ensure class-conditional synthesis.
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>Results</h2>
+                        <p>
+                            The models achieved high-fidelity image synthesis, with a classifier accurately distinguishing over 85% of generated samples.
+                            Below is a sample output comparison:
+                        </p>
+                        <img src="images/ImageSynthesis.jpg" alt="Generated Image Samples" style="width: 100%; max-width: 800px; margin: 20px 0;">
+                        <p>
+                            The latent diffusion models produced sharp, class-consistent outputs, outperforming traditional GANs in sample diversity and clarity.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Future Improvements</h2>
+                        <ul>
+                            <li>Enhancing latent diffusion models with <strong>cross-attention mechanisms</strong>.</li>
+                            <li>Training on <strong>higher-resolution datasets</strong> like CelebA or CIFAR-10.</li>
+                            <li>Exploring <strong>hybrid approaches</strong> combining VAEs with transformers.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Tools & Technologies Used</h2>
+                        <p>
+                        <ol>
+                            <li><strong> Python (PyTorch, NumPy, Matplotlib) </strong> - Model development and training. <br/>
+                            <li><strong> FashionMNIST Dataset </strong> - Image dataset for training and evaluation. <br/>
+                            <li><strong> Deep Learning (VAE, DDPM, DDIM, and LDDPM) </strong> - Generative modeling techniques. <br/>
+                        </ol>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Code & Demo</h2>
+                        <p>Sorry, the source code cannot to shared publicly. If you're interested to know more about it, feel free to reach me out.
+                        </p>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+			<footer id="footer">
+				<center>
+				<div class="inner">
+					<section>
+						<h2>Contact Information</h2>
+						<ul class="icons">
+							<li><a href="tel:+17806953570" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="mailto:mmaheer@ualberta.ca" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="http://www.linkedin.com/in/mmaheer" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Maheer1207" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy;2024 Mohammad Mohaiminul Islam Maheer. All rights reserved</li>
+					</ul>
+				</center>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+    </body>
+</html>
